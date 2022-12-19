@@ -3,6 +3,42 @@
 
 <head>
     <title>Jade Ohlhauser</title>
+
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Chivo+Mono:wght@300&display=swap');
+
+        * {
+            font-family: 'Chivo Mono', monospace;
+        }
+
+        dl {
+            min-width: 50%;
+            display: inline-block;
+        }
+
+        dt,
+        dd {
+            box-sizing: border-box;
+            padding: 10px;
+        }
+
+        dd~dt,
+        dd~dd {
+            border-top: 1px solid #bdc8ca;
+        }
+
+        dt {
+            float: left;
+            width: 25%;
+            padding-bottom: 0;
+        }
+
+        dd:after {
+            content: "";
+            display: block;
+            clear: both;
+        }
+    </style>
 </head>
 
 <body>
@@ -10,10 +46,11 @@
         <div class=”blurb”>
             <h1>Hi, I am Jade Ohlhauser</h1>
             <dl>
-                <dt>Social</dt>
-                <dd><a rel="me" href="https://hachyderm.io/@jadeonly">Mastodon</a></dd>
+                <dt>Personal</dt>
+                <dd><a rel="me" href="https://hachyderm.io/@jadeonly">Mastodon</a>, <a rel="me"
+                        href="https://github.com/jadeohl">GitHub</a></dd>
                 <dt>Professional</dt>
-                <dd><a rel="me" href=”https://jts.ltd”>Jade Technology Strategy Ltd.</a></dd>
+                <dd><a rel="me" href="https://jts.ltd/">Jade Technology Strategy Ltd.</a></dd>
             </dl>
         </div>
     </div>
