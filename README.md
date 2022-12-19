@@ -1,3 +1,3 @@
 - 👋 Hi, I’m @jadeohl
 
-I am the VP Software Development at a fintech company based in Calgary, Canada called [Reach](https://withreach.com).
+I am learning 🦀 [Rust](https://www.rust-lang.org/) for my next product idea.
