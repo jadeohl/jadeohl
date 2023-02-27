@@ -1,3 +1,1 @@
-- 👋 Hi, I’m @jadeohl
-
-I am learning 🦀 [Rust](https://www.rust-lang.org/) for my next product idea.
+Hi, I’m @jadeohl. [My links](https://jadeohlhauser.com/)
