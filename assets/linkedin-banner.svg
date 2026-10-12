@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1584" height="396" viewBox="0 0 1584 396" role="img" aria-labelledby="title description">
+  <title id="title">Olive geometric LinkedIn banner</title>
+  <desc id="description">A dark olive charcoal background with subtle geometric outlines at either edge, matching jadeohlhauser.com.</desc>
+  <rect width="1584" height="396" fill="#34362b" />
+
+  <g fill="none" stroke="#79816c" stroke-width="1.5" stroke-opacity="0.28">
+    <path d="M-84 328V86H136V-68H474v242H254v154H-84Z" />
+    <path d="M-52 360V118H168V-36H506v242H286v154H-52Z" />
+    <path d="M-20 392V150H200V-4H538v242H318v154H-20Z" />
+  </g>
+
+  <g transform="translate(1584 396) rotate(180)" fill="none" stroke="#79816c" stroke-width="1.5" stroke-opacity="0.28">
+    <path d="M-84 328V86H136V-68H474v242H254v154H-84Z" />
+    <path d="M-52 360V118H168V-36H506v242H286v154H-52Z" />
+    <path d="M-20 392V150H200V-4H538v242H318v154H-20Z" />
+  </g>
+</svg>

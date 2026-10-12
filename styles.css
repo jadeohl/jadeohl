@@ -1,0 +1,178 @@
+:root {
+  color-scheme: dark;
+  --charcoal: #34362b;
+  --paper: #f3f3ec;
+  --secondary: #c8ccbd;
+  --mint: #c3e7cc;
+  --ink: #34362b;
+}
+
+* { box-sizing: border-box; }
+
+body {
+  margin: 0;
+  background: var(--charcoal);
+  color: var(--paper);
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  -webkit-font-smoothing: antialiased;
+}
+
+::selection { background: var(--mint); color: var(--ink); }
+.intro { overflow: hidden; }
+
+.intro-inner {
+  display: grid;
+  grid-template-columns: 1.12fr 1fr;
+  align-items: center;
+  gap: clamp(2.5rem, 6vw, 6rem);
+  width: min(100% - 8rem, 1120px);
+  min-height: max(680px, calc(100svh - 112px));
+  margin: 0 auto;
+  padding: 5rem 0;
+}
+
+.intro-copy { position: relative; z-index: 1; }
+
+.eyebrow {
+  margin: 0 0 2rem;
+  color: var(--secondary);
+  font-size: 0.72rem;
+  font-weight: 500;
+  line-height: 1.5;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+}
+
+h1 {
+  margin: 0;
+  font-size: clamp(4.4rem, 7.2vw, 6.3rem);
+  font-weight: 400;
+  line-height: 0.99;
+  letter-spacing: -0.055em;
+}
+
+.name-period { color: var(--mint); }
+
+.description {
+  max-width: 36ch;
+  margin: 2rem 0 2.25rem;
+  color: var(--secondary);
+  font-size: clamp(1.05rem, 1.65vw, 1.25rem);
+  font-weight: 400;
+  line-height: 1.65;
+}
+
+.linkedin-link {
+  display: inline-flex;
+  min-height: 56px;
+  align-items: center;
+  gap: 0.75rem;
+  padding: 1rem 1.25rem;
+  background: var(--mint);
+  color: var(--ink);
+  font-size: 0.9rem;
+  font-weight: 500;
+  line-height: 1.5;
+  text-decoration: none;
+  transition: background-color 160ms ease, transform 160ms ease;
+}
+
+.linkedin-link:hover { background: var(--paper); transform: translateY(-2px); }
+.linkedin-link:focus-visible { outline: 2px solid var(--paper); outline-offset: 5px; }
+.linkedin-icon { width: 19px; height: 19px; }
+.link-arrow { width: 18px; height: 18px; margin-left: 0.65rem; }
+
+.location {
+  margin: 2.25rem 0 0;
+  color: var(--secondary);
+  font-size: 0.75rem;
+  letter-spacing: 0.03em;
+}
+
+.portrait-composition {
+  position: relative;
+  width: 100%;
+  max-width: 420px;
+  justify-self: end;
+}
+
+.linework {
+  position: absolute;
+  z-index: 0;
+  inset: -12% -19% -12% -19%;
+  width: 138%;
+  height: 124%;
+  stroke: #79816c;
+  stroke-opacity: 0.3;
+  stroke-width: 1;
+}
+
+.portrait {
+  position: relative;
+  z-index: 1;
+  aspect-ratio: 4 / 5;
+  margin: 0;
+  overflow: hidden;
+  background: #a2a49b;
+}
+
+.portrait img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: 50% 40%;
+}
+
+.portrait-accent {
+  position: absolute;
+  z-index: 2;
+  right: -12px;
+  bottom: -12px;
+  width: 76px;
+  height: 76px;
+  border-right: 2px solid var(--mint);
+  border-bottom: 2px solid var(--mint);
+}
+
+.company-footer { color-scheme: light; background: var(--paper); color: var(--ink); }
+
+.footer-inner {
+  display: flex;
+  width: min(100% - 8rem, 1120px);
+  min-height: 112px;
+  align-items: center;
+  justify-content: space-between;
+  gap: 2rem;
+  margin: 0 auto;
+  padding: 1.5rem 0;
+}
+
+.company-logo { display: block; width: 200px; height: auto; }
+.footer-inner p { margin: 0; font-size: 0.75rem; line-height: 1.5; }
+
+@media (max-width: 900px) {
+  .intro-inner, .footer-inner { width: calc(100% - 5rem); }
+  .intro-inner { gap: 3rem; min-height: max(620px, calc(100svh - 112px)); }
+  h1 { font-size: clamp(3.5rem, 7.5vw, 4.5rem); }
+  .description { font-size: 1.05rem; }
+}
+
+@media (max-width: 640px) {
+  .intro-inner, .footer-inner { width: calc(100% - 3rem); }
+  .intro-inner { grid-template-columns: 1fr; min-height: auto; gap: 3.75rem; padding: 3.5rem 0 3.75rem; }
+  .eyebrow { margin-bottom: 1.6rem; font-size: 0.65rem; letter-spacing: 0.11em; }
+  h1 { font-size: clamp(3.3rem, 12.8vw, 5rem); }
+  .description { max-width: 35ch; margin: 1.6rem 0 1.75rem; font-size: 1.1rem; }
+  .location { margin-top: 1.75rem; }
+  .portrait-composition { width: 88%; max-width: 360px; justify-self: center; }
+  .portrait { aspect-ratio: 1 / 1.1; }
+  .portrait img { object-position: 50% 34%; }
+  .footer-inner { min-height: 132px; flex-direction: column; align-items: flex-start; justify-content: center; gap: 1rem; padding: 1.75rem 0; }
+  .company-logo { width: 180px; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .linkedin-link { transition: none; }
+  .linkedin-link:hover { transform: none; }
+}
